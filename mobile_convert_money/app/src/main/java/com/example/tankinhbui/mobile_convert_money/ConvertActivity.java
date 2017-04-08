@@ -72,7 +72,7 @@ public class ConvertActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent screen2 = new Intent(ConvertActivity.this, ShowActivity.class);
+                Intent screen2 = new Intent(ConvertActivity.this, MainActivity.class);
                 startActivity(screen2);
             }
         });
@@ -85,7 +85,7 @@ public class ConvertActivity extends AppCompatActivity {
             return kq;
         }
         protected void onPostExecute(final String s){
-            //Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
+            //Toast.makeText(ShowActivity.this, s, Toast.LENGTH_LONG).show();
             try {
                 JSONObject root = new JSONObject(s);
                 JSONObject t1 = root.getJSONObject("query");
